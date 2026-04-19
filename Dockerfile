@@ -1,2 +1,11 @@
 FROM php:8.2-apache
-COPY . /var/www/html/
+
+WORKDIR /var/www/html
+
+COPY . .
+
+EXPOSE 80
+
+
+
+

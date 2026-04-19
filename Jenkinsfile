@@ -3,35 +3,19 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
+        stage('Checkout') {
             steps {
                 git 'https://github.com/jawadidhammou6-droid/app.git'
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t app .'
-            }
-        }
-
-        stage('Deploy Container') {
+        stage('Deploy') {
             steps {
                 sh '''
-                docker stop app || true
-                docker rm app || true
-                docker run -d -p 8082:80 --name app app
+                sudo cp -r * /var/www/html/
+                sudo systemctl restart apache2
                 '''
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'CI/CD SUCCESS 🚀 Application déployée'
-        }
-        failure {
-            echo 'CI/CD FAILED ❌ Vérifier logs'
         }
     }
 }
