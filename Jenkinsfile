@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
+        stage('Clone Code') {
             steps {
                 git 'https://github.com/jawadidhammou6-droid/app.git'
             }
@@ -11,36 +11,27 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh 'docker build -t student-app .'
-                }
+                sh 'docker build -t app .'
             }
         }
 
-        stage('Stop Old Container') {
+        stage('Deploy Container') {
             steps {
-                script {
-                    sh 'docker stop student-app || true'
-                    sh 'docker rm student-app || true'
-                }
-            }
-        }
-
-        stage('Run Application') {
-            steps {
-                script {
-                    sh 'docker run -d -p 8082:80 --name student-app student-app'
-                }
+                sh '''
+                docker stop app || true
+                docker rm app || true
+                docker run -d -p 8082:80 --name app app
+                '''
             }
         }
     }
 
     post {
         success {
-            echo 'CI/CD terminé avec succès 🎉 Application déployée'
+            echo 'CI/CD SUCCESS 🚀 Application déployée'
         }
         failure {
-            echo 'Erreur dans le pipeline ❌'
+            echo 'CI/CD FAILED ❌ Vérifier logs'
         }
     }
 }
