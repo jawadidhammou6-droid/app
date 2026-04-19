@@ -69,3 +69,12 @@
 
 </body>
 </html>
+<h1 style="color:blue;">TEST CI/CD JENKINS OK ✔</h1>
+<p>Version automatique déployée</p>
+<h1 style="color:blue;">Application Gestion Etudiants</h1>
+
+<p style="color:green;">
+CI/CD avec Jenkins fonctionne ✔
+</p>
+
+
