@@ -70,38 +70,39 @@
     </div>
     <body style="background-color: lightgreen;">
         <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Student List</title>
+    <title>Liste des étudiants</title>
 </head>
 <body>
 
 <h2>Liste des étudiants</h2>
 
-<input type="text" id="name" placeholder="Nom étudiant">
-<button onclick="addStudent()">Ajouter</button>
-
-<ul id="list"></ul>
+<ul id="studentList"></ul>
 
 <script>
-function addStudent() {
-    let name = document.getElementById("name").value;
+// liste déjà existante
+let students = [
+    "Ahmed",
+    "Sara",
+    "Youssef",
+    "Khadija",
+    "Omar"
+];
 
-    if(name === "") return;
+// afficher automatiquement
+let list = document.getElementById("studentList");
 
+students.forEach(function(name) {
     let li = document.createElement("li");
     li.innerHTML = name;
-
-    document.getElementById("list").appendChild(li);
-
-    document.getElementById("name").value = "";
-}
+    list.appendChild(li);
+});
 </script>
 
 </body>
 </html>
-
-
     
 
 
