@@ -81,28 +81,7 @@
 
 <ul id="studentList"></ul>
 
-<script>
-// liste déjà existante
-let students = [
-    "Ahmed",
-    "Sara",
-    "Youssef",
-    "Khadija",
-    "Omar"
-];
 
-// afficher automatiquement
-let list = document.getElementById("studentList");
-
-students.forEach(function(name) {
-    let li = document.createElement("li");
-    li.innerHTML = name;
-    list.appendChild(li);
-});
-</script>
-
-</body>
-</html>
     
 
 
