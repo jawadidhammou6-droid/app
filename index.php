@@ -69,7 +69,39 @@
     <div class="container">
     </div>
     <body style="background-color: lightgreen;">
-        
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+
+<h2>Liste des étudiants</h2>
+
+<input type="text" id="name" placeholder="Nom étudiant">
+<button onclick="addStudent()">Ajouter</button>
+
+<ul id="list"></ul>
+
+<script>
+function addStudent() {
+    let name = document.getElementById("name").value;
+
+    if(name === "") return;
+
+    let li = document.createElement("li");
+    li.innerHTML = name;
+
+    document.getElementById("list").appendChild(li);
+
+    document.getElementById("name").value = "";
+}
+</script>
+
+</body>
+</html>
+
+
     
 
 
