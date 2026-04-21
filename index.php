@@ -109,7 +109,6 @@
 <body>
 
 <div class="box">
-    <h2>🚀 DevOps Project Status</h2>
     <p>Application : <span class="ok">Running ✔</span></p>
     <p>CI/CD : <span class="ok">Active ✔</span></p>
     <p>Version : 1.0</p>
