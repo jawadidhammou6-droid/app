@@ -112,11 +112,10 @@
     <p>Application : <span class="ok">Running ✔</span></p>
     <p>CI/CD : <span class="ok">Active ✔</span></p>
     <p>Version : 1.0</p>
-    <p>Date : <?php echo date("Y-m-d H:i:s"); ?></p>
-</div>
 
-</body>
-</html>
+</di
+
+
 
 
 
