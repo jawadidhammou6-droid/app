@@ -87,7 +87,7 @@
     <style>
         body {
             font-family: Arial;
-            background-color: #f4f4f4;
+            background-color: #f00;
             text-align: center;
         }
         .box {
