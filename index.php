@@ -102,7 +102,7 @@
         }
         .ok {
             color: green;
-            font-weight: bold;
+            
         }
     </style>
 </head>
@@ -114,6 +114,7 @@
     <p>Version : 1.0</p>
 
 </di
+
 
 
 
