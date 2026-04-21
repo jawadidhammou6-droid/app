@@ -80,6 +80,45 @@
 <h2>Liste des étudiants</h2>
 
 <ul id="studentList"></ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Status</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .box {
+            margin-top: 100px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0px 0px 10px gray;
+        }
+        .ok {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🚀 DevOps Project Status</h2>
+    <p>Application : <span class="ok">Running ✔</span></p>
+    <p>CI/CD : <span class="ok">Active ✔</span></p>
+    <p>Version : 1.0</p>
+    <p>Date : <?php echo date("Y-m-d H:i:s"); ?></p>
+</div>
+
+</body>
+</html>
+
 
 
     
